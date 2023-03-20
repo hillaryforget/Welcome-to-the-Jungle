@@ -1,0 +1,14 @@
+<% @order.line_items.each do |item| %>
+  <tr>
+  <td>
+    <%= image_tag item.product.image.tiny.url %>
+  </td>
+  <td>
+    <h4><%= item.product.name %></h4>
+    <p><%= item.product.description %></p>
+  </td>
+  <td><%= humanized_money_with_symbol item.item_price_cents / 100.00 %></td>
+  <td><%= item.quantity %></td>
+  <td><%= humanized_money_with_symbol item.total_price_cents / 100.00 %></td>
+  </tr>
+<% end %>
