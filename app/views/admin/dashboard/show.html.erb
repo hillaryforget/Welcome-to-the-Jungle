@@ -20,6 +20,7 @@
           <h4 class="my-0 fw-normal">Total Categories</h4>
           <p class="card-text">3 <%= @category_count %> categories</p>
           <%= link_to "View all Products","/products", :class => "btn btn-primary" %>
+          <%= link_to 'Categories', [:admin, :categories], class: "btn btn-secondary" %>
         </div>
       </div>
     </div>
