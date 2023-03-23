@@ -1,0 +1,14 @@
+<h1>Signup!</h1>
+
+<%= form_for :user, url: '/users' do |f| %>
+
+  <div class="form-group">
+    <label>Name:</label> <%= f.text_field :name, class: "form-control", placeholder: "Enter your full name" %>
+    <label>Email:</label> <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
+  </div>
+  <div class="form-group">
+    <label>Password:</label> <%= f.password_field :password, class: "form-control", placeholder: "Password"  %>
+    <label>Confirm password:</label> <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Enter password again" %>
+  </div>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
