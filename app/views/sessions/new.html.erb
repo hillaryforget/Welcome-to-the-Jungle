@@ -1,0 +1,15 @@
+<h1>Login</h1>
+
+<%= form_tag '/login' do %>
+
+  <div class="form-group">
+    <label>Email:</label> <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter email" %>
+    <label>Password:</label> <%= password_field_tag :password, nil, class: "form-control", placeholder: "Enter password" %>
+  </div>
+  <%= submit_tag "Submit", class: "btn btn-primary" %>
+  <% if flash[:error] %>
+    <div class="alert alert-danger" role="alert">
+      <%= flash[:error] %>
+    </div>
+  <% end %>
+<% end %>
